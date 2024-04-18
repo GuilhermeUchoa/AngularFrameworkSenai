@@ -1,0 +1,27 @@
+.carousel-item img {
+    width: 400px;
+    height: 600px;
+    border-radius: 20px;
+}
+
+.example-card {
+    max-width: 400px;
+  }
+  
+.example-header-image {
+    background-image: url('../../../favicon.ico');
+    background-size: cover;
+    
+ }
+
+ img#mat-card-imag {
+    width: 400px;
+    height: 350px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+mat-card.mat-mdc-card.mdc-card.example-card {
+    border-radius: 20px;
+    margin: 16px;
+}

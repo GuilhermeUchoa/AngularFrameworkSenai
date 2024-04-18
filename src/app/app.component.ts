@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { MenuComponent } from './componentes/menu/menu.component';
+import { RodapeComponent } from './componentes/rodape/rodape.component';
+import { InicioComponent } from './componentes/inicio/inicio.component';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, MenuComponent, RodapeComponent, InicioComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'angular-projeto';
+  title = 'Angular Projeto';
 }
