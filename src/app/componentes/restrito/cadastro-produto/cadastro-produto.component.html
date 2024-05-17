@@ -1,31 +1,37 @@
 <main>
     <h1>Cadastrar jogo</h1>
     <section id="section-cadastro">
-        <form>
+        <form [formGroup]="produtoFormulario">
 
             <label for="produto">Nome do Produto</label>
-            <input type="text" class="form-control" name="produto" [(ngModel)]="produto.produto">
-
+            <input type="text" class="form-control" name="produto" formControlName="produto">
+            @if(produtoFormulario.get('produto')?.errors?.['required'] && produtoFormulario.get('produto')?.touched){
+                <p style='font-size: smaller; color: red;'>Nome obrigatorio</p>
+            }
+       
             <br>
-
+    
             <label for="descricao">Descrição</label>
-            <input type="text" class="form-control" name="descricao" [(ngModel)]="produto.descricao">
+            <input type="text" class="form-control" name="descricao" formControlName="descricao">
 
             <br>
 
             <label for="foto">Foto</label>
-            <input type="text" class="form-control" name="foto" [(ngModel)]="produto.foto">
-
+            <input type="text" class="form-control" name="foto" formControlName="foto">
+            
             <br>
 
             <label for="preco">Preço</label>
-            <input type="number" class="form-control" name="preco" [(ngModel)]="produto.preco">
-
+            <input type="number" class="form-control" name="preco" formControlName="preco">
+            @if(produtoFormulario.get('preco')?.errors?.['required'] && produtoFormulario.get('preco')?.touched){
+                <p style='font-size: smaller; color: red;'>Preço obrigatorio</p>
+            }
             <br>
 
 
-            <button type="button" class="btn btn-primary mb-3" (click)="cadastrar()">Cadastrar</button>
+            <button type="button" class="btn btn-primary mb-3" (click)="cadastrar()" [disabled]="!produtoFormulario.valid">Cadastrar</button>
 
         </form>
     </section>
 </main>
+

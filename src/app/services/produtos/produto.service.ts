@@ -14,7 +14,7 @@ export class ProdutoService {
   constructor(private _HttpClient: HttpClient) { }
 
   getProduto(id: any): Observable<Produto> {
-    let linkGetProduto = `${this.url}?id=${id}`;
+    let linkGetProduto = `${this.url}/${id}`;
     return this._HttpClient.get<Produto>(linkGetProduto);
   }
 
@@ -27,12 +27,13 @@ export class ProdutoService {
   }
 
   atualizarProduto(id:any, produto:Produto):Observable<Produto>{
-    let linkAtualizarProduto = `${this.url}?id=${id}`;
+    let linkAtualizarProduto = `${this.url}/${id}`;
     return this._HttpClient.put<Produto>(linkAtualizarProduto,produto)
   }
 
   removerProduto(id:any):Observable<Produto>{
-    let linkRemoverProduto = `${this.url}?id=${id}`;
+    let linkRemoverProduto = `${this.url}/${id}`;
+    console.log(linkRemoverProduto)
     return this._HttpClient.delete<Produto>(linkRemoverProduto)
   }
 
