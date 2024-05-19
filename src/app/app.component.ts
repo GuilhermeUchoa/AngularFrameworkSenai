@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { MenuComponent } from './componentes/menu/menu.component';
 import { RodapeComponent } from './componentes/rodape/rodape.component';
 import { InicioComponent } from './componentes/inicio/inicio.component';
+import { LoginService } from './services/login/login.service';
 
 
 @Component({
@@ -14,4 +15,7 @@ import { InicioComponent } from './componentes/inicio/inicio.component';
 })
 export class AppComponent {
   title = 'Angular Projeto';
+
+
+
 }

@@ -13,9 +13,9 @@ export class LoginService {
   login(usuario: string, senha: string): void {
     if (usuario=="aluno" && senha=="1234") {
       localStorage.setItem('token','qwer1234')
-      this.mostrarMenu.next(true);
+      this.setMostraMenu(true)
     } else {
-      this.mostrarMenu.next(false)
+      this.setMostraMenu(false)
     }
   }
 

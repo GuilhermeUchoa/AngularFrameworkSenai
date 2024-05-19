@@ -15,14 +15,22 @@ import { LoginService } from '../../services/login/login.service';
   styleUrl: './menu.component.css'
 })
 export class MenuComponent {
-  mostrarMenu: boolean = false
+  mostrarMenu!: boolean 
 
   constructor(private _LoginService: LoginService) { }
 
   ngOnInit(): void {
+
+    if(localStorage.getItem('token') !== null){
+
+      this._LoginService.setMostraMenu(true)
+      this.mostrarMenu = true
+    }
+
     this._LoginService.getMostraMenu().subscribe((res) => {
       this.mostrarMenu = res;
-      console.log(res)
+
+
     })
   }
 

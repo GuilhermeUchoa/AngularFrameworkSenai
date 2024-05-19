@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { Produto } from '../../../interfaces/produtos/produto';
 import { ProdutoService } from '../../../services/produtos/produto.service';
-import { LoginService } from '../../../services/login/login.service';
+
 
 @Component({
   selector: 'app-listar-produtos',
@@ -21,7 +21,7 @@ export class ListarProdutosComponent {
   constructor(
     private _ProdutoService: ProdutoService,
     private _Router:Router,
-    private _LoginService:LoginService
+
   ) { }
 
   ngOnInit(): void {

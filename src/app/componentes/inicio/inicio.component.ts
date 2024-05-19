@@ -5,6 +5,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { Produto } from '../../interfaces/produtos/produto';
 import { ProdutoService } from '../../services/produtos/produto.service';
+import { LoginService } from '../../services/login/login.service';
 
 
 @Component({
