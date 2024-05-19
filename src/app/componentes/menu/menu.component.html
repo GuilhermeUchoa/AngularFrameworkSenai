@@ -6,9 +6,12 @@
     <mat-menu #menu="matMenu">
       <a href=""class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-0-hover"><button mat-menu-item>Home</button></a>
       <a href="login"class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-0-hover"><button mat-menu-item>Login</button></a>
+      @if (mostrarMenu) {
+        <a href="restrito/listar"class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-0-hover"><button mat-menu-item>Restrito</button></a>
+      }
       
-      <button mat-menu-item>Promoções</button>
-      <button mat-menu-item>Carrinho</button>
+
+      
       
     </mat-menu>
 

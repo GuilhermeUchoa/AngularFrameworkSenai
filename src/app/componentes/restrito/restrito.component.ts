@@ -10,5 +10,5 @@ import { MenuProdutosComponent } from './menu-produtos/menu-produtos.component';
   styleUrl: './restrito.component.css'
 })
 export class RestritoComponent {
-
+  
 }

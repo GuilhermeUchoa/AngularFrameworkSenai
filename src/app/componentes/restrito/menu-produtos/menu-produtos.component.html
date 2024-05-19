@@ -1,7 +1,13 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
-        <span><a routerLink="/restrito/lista">Listar Produtos</a></span>
-        <span><a routerLink="/restrito/cadastro">Cadastrar Produto</a></span>
+            <li>
+                <span><a routerLink="/restrito/listar">Listar Produto</a></span>
+            </li>
+            <span></span>
+            <li>
+                <span><a routerLink="/restrito/cadastro">Cadastrar Produto</a></span>
+            </li>
+
         <span class="example-spacer"></span>
         <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon"
             (click)="logout()">

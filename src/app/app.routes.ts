@@ -5,12 +5,13 @@ import { RestritoComponent } from './componentes/restrito/restrito.component';
 import { CadastroProdutoComponent } from './componentes/restrito/cadastro-produto/cadastro-produto.component';
 import { ListarProdutosComponent } from './componentes/restrito/listar-produtos/listar-produtos.component';
 import { AtualizarProdutosComponent } from './componentes/restrito/atualizar-produtos/atualizar-produtos.component';
+import { guardGuard } from './guard.guard';
 
 export const routes: Routes = [
     { path: '', component: InicioComponent },
     { path: 'login', component: LoginComponent },
     {
-        path: 'restrito', component: RestritoComponent, children: [
+        path: 'restrito', component: RestritoComponent, canActivate: [guardGuard] ,children: [
             { path: 'cadastro', component: CadastroProdutoComponent },
             { path: 'listar', component: ListarProdutosComponent },
             { path: 'editar/:id', component: AtualizarProdutosComponent },
