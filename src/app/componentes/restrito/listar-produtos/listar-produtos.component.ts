@@ -26,7 +26,7 @@ export class ListarProdutosComponent {
 
   ngOnInit(): void {
     this.listar()
-    this._LoginService.setMostraMenu(false);
+
   }
   listar():void{
     this._ProdutoService.getProdutos().subscribe((data)=>{this.produtos = data})
